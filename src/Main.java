@@ -32,10 +32,10 @@ public class Main {
 		//task 4
 		int agePeople = 3;
 		
-		if (agePeople >= 2 && agePeople < 6) {
+		if (agePeople >= 2 && agePeople <= 6) {
 			System.out.println("Если возраст человека равен от 2 до 6 лет, то ему нужно ходить в детский сад");
 		}
-		if (agePeople >= 7 && agePeople < 17) {
+		if (agePeople >= 7 && agePeople <= 17) {
 			System.out.println("Если возраст человека равен от 7 до 17 лет, то ему нужно ходить в школу");
 		}
 		if (agePeople >= 18 && agePeople <= 24) {
@@ -49,7 +49,7 @@ public class Main {
 		if (ageChildren < 5) {
 			System.out.println("Если возраст ребёнка равен меньше 5 лет, то ему нельзя кататься на атракционе");
 		}
-		if (ageChildren > 5 && ageChildren <= 14) {
+		if (ageChildren >= 5 && ageChildren <= 14) {
 			System.out.println("Если возраст ребёнка равен от 5 лет и до 14 лет включительно, " +
 					"то ему можно кататься на атракционе в сопровождении взрослого");
 		}
@@ -58,20 +58,16 @@ public class Main {
 					"то ему можно кататься на атракционе без сопровождения взрослого");
 		}
 		//task 6
-		int seatingPlace = 60;
-		int standingPlace = 42;
-		boolean seetSpaceAvailability = seatingPlace < 60;
-		boolean standingSpaceAvailability = standingPlace < 42;
-		
-		if (seetSpaceAvailability && standingSpaceAvailability) {
-			System.out.println("В вагоне есть и сидячее и стоячее место");
-		} else if (standingSpaceAvailability) {
+		int numberOfPassengers = 102;
+		if (numberOfPassengers < 60) {
+			System.out.println("В вагоне есть сидящее место");
+		} else if (numberOfPassengers >= 60 && numberOfPassengers < 102) {
 			System.out.println("В вагоне есть стоячее место");
-		} else if (seetSpaceAvailability) {
-			System.out.println("В вагоне есть сидячее место");
 		} else {
-			System.out.println("Вагон уже полностью забит");
+			System.out.println("В вагоне нет свободных мест");
 		}
+		
+		
 		//task 7
 		int one = 1;
 		int two = 2;
